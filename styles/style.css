@@ -1,0 +1,457 @@
+/*reset padrão*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*color themes*/
+:root {
+    --color1: #9BF2EA;
+    --color2: #41BFB3;
+    --color3: #2A8C82;
+    --color4: #275950;
+    --color5: #260101;
+}
+
+/*evitar scroll horizontal e efeito suave da pagina*/
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+
+header {
+    background-color: var(--color2);
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: "item1 item2";
+    padding: 16px;
+}
+
+.item1 {
+    grid-area: item1;
+    margin-left: 20vw;
+}
+
+.item2 {
+    grid-area: item2;
+}
+
+.lato-bold {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: black;
+    box-shadow: 2px 2px 8px black;
+    border-radius: 8px;
+}
+
+.lato-bold:hover {
+    box-shadow: 2px 2px 8px gray;
+}
+
+.menu-hamburger {
+    width: 24px;
+    cursor: pointer;
+}
+
+.menu-hamburger:hover {
+    transform: scale(1.05);
+
+}
+
+.menu-hamburger span {
+    height: 2px;
+    width: 100%;
+    background-color: var(--color1);
+    display: block;
+    margin-bottom: 4px;
+}
+
+/*estilo para icon close menu*/
+#menu-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/*estilo para icon close menu*/
+#menu-close span:hover {
+    background-color: rgba(238, 181, 75, 0.411);
+    border-radius: 50%;
+}
+
+#menu-close span {
+    font-size: 50px;
+    margin-top: 50px;
+
+}
+
+.logo-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.logo {
+    width: 85px;
+    height: auto;
+    box-shadow: 2px 2px 8px var(--color3);
+    border: none;
+    border-radius: 50%;
+}
+
+/*estilo menu navegação*/
+#navbar {
+    top: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    color: #fff;
+    background-color: var(--color1);
+    width: 50vw;
+    height: 50vh;
+    z-index: 999;
+    border-radius: 0 0 10px 0;
+    box-shadow: 2px 2px 5px black;
+    padding: 8px;
+    font-size: 18px;
+    font-weight: bold;
+
+}
+
+#navbar a {
+    text-decoration: none;
+    color: #4b4949;
+    cursor: pointer;
+
+}
+
+#navbar ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+
+}
+
+
+#navbar li {
+    list-style: none;
+    line-height: 30px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.233);
+}
+
+#navbar li:hover {
+    background-color: var(--color2);
+}
+
+#section-carousel {
+    background-color: var(--color2);
+}
+
+main {
+    background-color: var(--color2);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 3px;
+    align-items: center;
+}
+
+.text-sobreLoja {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 360px;
+    font-size: 18px;
+    text-align: justify;
+    padding: 16px;
+    background-color: var(--color2);
+}
+
+.text-sobreLoja h2 {
+    color: var(--color1);
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 4px;
+    box-shadow: 3px 3px 9px var(--color4);
+    border-radius: 4px;
+}
+
+.img-sobreLoja img {
+    display: flex;
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 3px 3px 9px rgba(2, 2, 2, 0.829);
+}
+
+.title-produtos {
+    display: flex;
+    background-color: rgb(219, 216, 216);
+    color: var(--color3);
+    text-align: center;
+    height: 82px;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-produtos {
+    display: flex;
+    height: auto;
+    padding: 8px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color2);
+
+}
+
+
+.content-produtos img, h3, h4, p, button {
+    margin-bottom: 8px;
+}
+
+.content-produtos img {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 2px 2px 4px var(--color5);
+    overflow: hidden;
+    transition: transform 0.5s ease;
+    /* Transição suave ao aplicar o zoom */
+}
+
+.content-produtos img:hover {
+    transform: scale(1.02);
+    /* Aumenta a escala da imagem em 10% */
+}
+
+.content-produtos h3 {
+    color: var(--color4);
+    font-weight: bold;
+}
+
+.content-produtos h4 {
+    color: var(--color1);
+    text-decoration: solid;
+    font-size: 24px;
+}
+
+.content-produtos button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color1);
+    color: var(--color3);
+    font-weight: bold;
+    max-width: 120px;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    margin-left: 45px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px var(--color4);
+    font-size: 16px;
+    bottom: 0;
+
+}
+
+.content-produtos p {
+    font-size: 16px;
+    text-align: justify;
+}
+
+.content-produtos button:hover {
+    background-color: var(--color5);
+    color: var(--color1);
+}
+
+.material-symbols-outlined {
+    font-size: 1rem;
+    color: var(--color3);
+}
+
+#galery-main {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-result {
+    display: flex;
+    background-color: var(--color3);
+    color: rgb(219, 216, 216);
+    text-align: center;
+    height: 82px;
+    align-items: center;
+    justify-content: center;
+}
+
+#galery-result1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    padding: 8px;
+    background-color: var(--color1);
+}
+
+#galery-result2 {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 16px;
+    padding: 8px;
+    background-color: var(--color2);
+}
+
+#galery-result2>.text-result h3 {
+    color: var(--color1);
+}
+
+#galery-result3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    padding: 8px;
+    background-color: var(--color1);
+}
+
+.text-result {
+    display: flex;
+    flex-direction: column;
+    padding: 4px;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+}
+
+
+.text-result h3 {
+    font-size: 24px;
+    color: var(--color3);
+    font-weight: bold;
+}
+
+.content-result img {
+    max-width: 230px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(66, 64, 64, 0.37);
+}
+
+
+.title-contact {
+    display: flex;
+    width: 100%;
+    background-color: var(--color3);
+    color: rgb(219, 216, 216);
+    text-align: center;
+    height: 82px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+#form-main {
+    padding: 16px;
+    display: flex;
+    max-width: 430px;
+    width: 100%;
+    height: 500px;
+    flex-direction: column;
+    background-color: rgb(219, 216, 216);
+    font-size: 1rem;
+}
+
+#form-main label {
+    color: var(--color4);
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 8px;
+}
+
+#form-main input {
+    padding: 8px;
+    height: 40px;
+}
+
+#form-main input, textarea:focus {
+    outline-color: var(--color3);
+}
+
+
+#form-main textarea {
+    margin: 20px 0;
+    padding: 8px;
+    height: 150px;
+    resize: none;
+
+}
+
+#form-main button {
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px var(--color4);
+    padding: 8px;
+    color: var(--color1);
+    font-size: 20px;
+    font-weight: bold;
+    background-color: var(--color3);
+}
+
+#form-main button:hover {
+    background-color: var(--color2);
+}
+
+/*estilo botão topo*/
+
+#topo {
+    background-image: var(--color1);
+    text-align: center;
+    font-size: 30px;
+    width: 30px;
+    height: auto;
+    display: none;
+    bottom: 175px;
+    right: 50px;
+    position: fixed;
+    z-index: 999;
+    border-radius: 0 0 10px 0;
+    box-shadow: 2px 2px 5px black;
+    cursor: pointer;
+}
+
+footer {
+    background-color: var(--color2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 100px;
+    text-align: center;
+}
+
+.icon-footer {
+    justify-content: space-between;
+
+}
+
+.icon-footer img {
+    width: 30px;
+    margin-right: 12px;
+    border-radius: 8px;
+
+}
+
+footer a {
+    text-decoration: none;
+    list-style: none;
+    color: #fff;
+}
